@@ -1,0 +1,30 @@
+
+replicaCount: 2
+
+image:
+  registry: nvrbckdown
+  repo: flask-app
+  tag: last-practice
+  port:
+    containerPort: 5000
+
+restartPolicy: Always
+
+environment:
+  ENV: dev
+  LOG_LEVEL: info
+  DEBUB: true
+
+secret:
+  enabled: false
+
+affinity:
+  nodeAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: admin
+          operator: In
+          values: 
+          - "true"
+       
