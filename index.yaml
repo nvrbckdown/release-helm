@@ -9,6 +9,6 @@ entries:
     name: practice-helm
     type: application
     urls:
-    - practice-helm-0.0.1.tgz
-    version: 0.0.1
+    - practice-helm-0.0.2.tgz
+    version: 0.0.2
 generated: "2024-02-09T21:17:41.50184+05:00"
